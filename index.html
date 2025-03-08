@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MerchStore - Home</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="#">MerchStore</a>
+    </div>
+    <ul class="navbar-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="/templates/series.html">Chat</a></li>
+      <li><a href="/templates/cart.html">🛒 Cart</a></li>
+      <li><a href="/templates/register.html">Login</a></li>
+      <input type="text" id="searchBox" placeholder="Search for products..." />
+      <button id="voiceSearchButton" onclick="startVoiceSearch()">🎤 Voice Search</button>
+      
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="home-section">
+    <div class="home-content">
+      <h1>Welcome to MerchStore</h1>
+      <p>Your one-stop shop for all the coolest merchandise. Start shopping now!</p>
+      <button onclick="window.location.href='customize.html'" class="customize-btn">
+        Customize Your Own Merch!
+      </button>
+    </div>
+    <div class="slideshow-container">
+      <div class="slide">
+        <img src="/static/images/home.jpg" alt="Home Image" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Spider-man Collection with Slider -->
+  <section id="spider-man" class="shop-section">
+    <h2>Spider-man Collection</h2>
+    <div class="slider-wrapper">
+      <button class="slider-arrow left-arrow" onclick="slideLeft('spider-man')">‹</button>
+      <div class="products-container">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/static/images/spdcup.jpg" alt="Spider-man Cup" />
+          </div>
+          <h3>Spider-man Cup</h3>
+          <p>50₹</p>
+          <button onclick="addToCart('Spider-man Cup', 50, '/static/images/spdcup.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/static/images/spdfig.jpg" alt="Spiderman-Bobblehead" />
+          </div>
+          <h3>Spiderman-Bobblehead</h3>
+          <p>500₹</p>
+          <button onclick="addToCart('Spiderman-Bobblehead', 500, '/static/images/spdfig.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/static/images/spdring.jpg" alt="Spiderman Silver Ring" />
+          </div>
+          <h3>Spiderman Silver Ring</h3>
+          <p>3000₹</p>
+          <button onclick="addToCart('Spiderman Silver Ring', 3000, '/static/images/spdring.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/static/images/spdshoes.jpg" alt="Sneakers" />
+          </div>
+          <h3>Spider-man Sneakers</h3>
+          <p>3400₹</p>
+          <button onclick="addToCart('Spider-man Sneakers', 3400, '/static/images/spdshoes.jpg')">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/static/images/spdhoodie.jpg" alt="Spider-man Hoodie" />
+          </div>
+          <h3>Spider-man Hoodie</h3>
+          <p>2400₹</p>
+          <button onclick="addToCart('Spider-man Hoodie', 2400, '/static/images/spdhoodie.jpg')">Buy Now</button>
+        </div>
+      </div>
+      <button class="slider-arrow right-arrow" onclick="slideRight('spider-man')">›</button>
+    </div>
+  </section>
+
+  <!-- Disney Collection -->
+  <section id="disney" class="shop-section">
+    <h2>Disney Collection</h2>
+    <div class="products-container">
+      <div class="product-card">
+        <div class="product-image">
+          <img src="/static/images/jpendant.webp" alt="Princess Jasmine Pendant" />
+        </div>
+        <h3>Princess Jasmine Pendant</h3>
+        <p>299₹</p>
+        <button onclick="addToCart('Princess Jasmine Pendant', 299, '/static/images/jpendant.webp')">Buy Now</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="/static/images/Doraemon Toy.webp" alt="Doraemon Toy" />
+        </div>
+        <h3>Doraemon Toy</h3>
+        <p>199₹</p>
+        <button onclick="addToCart('Doraemon Toy', 199, '/static/images/Doraemon Toy.webp')">Buy Now</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="/static/images/jneck.webp" alt="Jasmine Necklace" />
+        </div>
+        <h3>Jasmine Necklace</h3>
+        <p>120₹</p>
+        <button onclick="addToCart('Jasmine Necklace', 120, '/static/images/jneck.webp')">Buy Now</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="/static/images/jring.jpg" alt="Jasmine Ring" />
+        </div>
+        <h3>Jasmine Ring</h3>
+        <p>350₹</p>
+        <button onclick="addToCart('Jasmine Ring', 350, '/static/images/jring.jpg')">Buy Now</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="/static/images/rapperfume.jpg" alt="Rapunzel Perfume" />
+        </div>
+        <h3>Rapunzel Perfume</h3>
+        <p>1350₹</p>
+        <button onclick="addToCart('Rapunzel Perfume', 1350, '/static/images/rapperfume.jpg')">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Squid-Game Collection -->
+  <section id="squid-game" class="shop-section">
+    <h2>Squid-Game Collection</h2>
+    <div class="products-container">
+      <div class="product-card">
+        <div class="product-image">
+          <img src="/static/images/sgcostume.jpg" alt="Squid Game Costume" />
+        </div>
+        <h3>Cosplay Costume</h3>
+        <p>1999₹</p>
+        <button onclick="addToCart('Squid Game Costume', 1999, '/static/images/sgcostume.jpg')">Buy Now</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="/static/images/sgcrocs.jpg" alt="Squid Game Crocs" />
+        </div>
+        <h3>Crocs</h3>
+        <p>150₹</p>
+        <button onclick="addToCart('Squid Game Crocs', 150, '/static/images/sgcrocs.jpg')">Buy Now</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="/static/images/sgcap.jpg" alt="Squid Game Cap" />
+        </div>
+        <h3>Cap</h3>
+        <p>100₹</p>
+        <button onclick="addToCart('Squid Game Cap', 100, '/static/images/sgcap.jpg')">Buy Now</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="/static/images/sgcase.jpg" alt="Squid Game Phone Case" />
+        </div>
+        <h3>Phone Case</h3>
+        <p>2000₹</p>
+        <button onclick="addToCart('Squid Game Phone Case', 2000, '/static/images/sgcase.jpg')">Buy Now</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="/static/images/sgpillow.jpg" alt="Squid Game Pillow" />
+        </div>
+        <h3>Pillow</h3>
+        <p>550₹</p>
+        <button onclick="addToCart('Squid Game Pillow', 550, '/static/images/sgpillow.jpg')">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="voice-search.js"></script>
+  <script src="/static/script.js"></script>
+</body>
+</html>

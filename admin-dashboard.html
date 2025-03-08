@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Inventory Dashboard</title>
+    <link rel="stylesheet" href="/static/admin-dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Inventory Management</h1>
+        
+        <!-- Regular Products Section -->
+        <h2>Products</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Image</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="productList">
+                <!-- Products will be loaded here -->
+            </tbody>
+        </table>
+        
+        <h2>Add New Product</h2>
+        <form id="productForm">
+            <input type="text" id="name" name="name" placeholder="Product Name" required>
+            <input type="number" id="price" name="price" placeholder="Price" required>
+            <input type="number" id="stock" name="stock" placeholder="Stock" required>
+            <input type="file" id="image" name="image" accept="image/*" required>
+            <img id="imagePreview" class="hidden" alt="Image Preview">
+            <button type="submit">Add Product</button>
+        </form>
+        
+        <!-- User-Customized Products Section -->
+        <h2>User Customized Products</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>User ID</th>
+                    <th>Product ID</th>
+                    <th>Custom Design</th>
+                    <th>Image</th>
+                    <th>Created At</th>
+                </tr>
+            </thead>
+            <tbody id="customizedProductsList">
+                <!-- Customized products will be loaded here -->
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="/static/admin-dashboard.js"></script>
+</body>
+</html>
